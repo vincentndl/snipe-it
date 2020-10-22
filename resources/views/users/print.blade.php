@@ -48,7 +48,10 @@
       <h2>{{ $snipeSettings->site_name }}</h2>
     @endif
 @endif
-
+<div style="text-align: center">
+    <h2>Biên Bản Bàn Giao Tài Sản Công Nghệ Thông Tin tại {{ $snipeSettings->site_name }}</h2>
+	   Minutes of information technology asset transfer in {{ $snipeSettings->site_name }}
+</div>
 <h2>Assigned to {{ $show_user->present()->fullName() }}</h4>
 
 @if ($assets->count() > 0)
@@ -243,14 +246,22 @@
 <br>
 <table>
     <tr>
-        <td>Signed Off By:</td>
+        <td>Signed Off By {{ $show_user->present()->fullName() }}:</td>
         <td>________________________________________________________</td>
         <td></td>
         <td>Date:</td>
         <td>________________________________________________________</td>
     </tr>
 </table>
-
+<table>
+    <tr>
+        <td>Signed Off By IT:</td>
+        <td>________________________________________________________</td>
+        <td></td>
+        <td>Date:</td>
+        <td>________________________________________________________</td>
+    </tr>
+</table>
 
 </body>
 </html>
